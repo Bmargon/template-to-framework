@@ -6,19 +6,30 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ProductoComponent } from './pages/producto/producto.component';
+import { InfoPaginaService } from './services/info-pagina.service';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    AboutComponent,
+    ProductoComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    InfoPaginaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
